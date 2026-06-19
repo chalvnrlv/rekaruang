@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Reka Ruang — reach out via WhatsApp, email, or our form to discuss projects, request samples, or ask about Reka Tiles.">
+    <title>Contact — Reka Ruang</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav class="navbar solid" aria-label="Main navigation">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="Reka Ruang Home">
+                <img src="assets/images/ASSET LOGO.png" alt="Reka Ruang" class="logo-img">
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="catalog.html" class="nav-link">Products</a></li>
+                <li><a href="gallery.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-contact active">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="catalog.html" class="nav-link">Products</a>
+        <a href="gallery.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-contact active">Contact</a>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <header class="page-header" aria-label="Contact page header">
+        <div class="container">
+            <div class="page-header-inner">
+                <div>
+                    <span class="label">Get in Touch</span>
+                    <h1>Let's talk<br>about your project.</h1>
+                    <p>Reach us for sample requests, specifications, or any questions about the Reka Tiles collection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section-md" style="padding-top:var(--s9);" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading" class="reveal" style="display:none;">Contact</h2>
+
+                <div class="contact-grid">
+
+                    <!-- Left: channels + info -->
+                    <div>
+                        <span class="label" style="display:block;margin-bottom:var(--s5);">Direct Contact</span>
+
+                        <div class="contact-channels">
+
+                            <a href="https://wa.me/62xxxxxxxxx?text=Hi%20Reka%20Ruang%2C%20I%27d%20like%20to%20enquire%20about%20your%20products."
+                                target="_blank" rel="noopener" class="contact-channel reveal"
+                                aria-label="Chat on WhatsApp">
+                                <div class="channel-icon">&#x1F4AC;</div>
+                                <div class="channel-info">
+                                    <span class="label">WhatsApp</span>
+                                    <!-- PLACEHOLDER — replace with real number -->
+                                    <span class="val">+62 XXX XXX XXXX</span>
+                                </div>
+                            </a>
+
+                            <a href="mailto:hello@rekaruang.com?subject=Enquiry%20—%20Reka%20Ruang"
+                                class="contact-channel reveal reveal-d1" aria-label="Email Reka Ruang">
+                                <div class="channel-icon">&#x2709;</div>
+                                <div class="channel-info">
+                                    <span class="label">Email</span>
+                                    <!-- PLACEHOLDER — replace with real email -->
+                                    <span class="val">hello@rekaruang.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener"
+                                class="contact-channel reveal reveal-d2" aria-label="Instagram">
+                                <div class="channel-icon">&#x1F4F7;</div>
+                                <div class="channel-info">
+                                    <span class="label">Instagram</span>
+                                    <!-- PLACEHOLDER — replace with real handle -->
+                                    <span class="val">@rekaruang</span>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <!-- Address -->
+                        <div style="margin-top:var(--s7);padding:var(--s5) 0;border-top:1px solid var(--border);"
+                            class="reveal">
+                            <span class="label" style="display:block;margin-bottom:var(--s4);">Studio</span>
+                            <address style="color:var(--text-secondary);font-size:var(--text-sm);line-height:1.8;">
+                                <!-- PLACEHOLDER — replace with real address -->
+                                Jakarta, Indonesia<br>
+                                Showroom visits by appointment.
+                            </address>
+                        </div>
+
+                        <!-- Response note -->
+                        <p style="font-size:var(--text-xs);color:var(--text-muted);margin-top:var(--s5);line-height:1.6;"
+                            class="reveal">
+                            We typically respond within 1 business day. For urgent enquiries, WhatsApp is fastest.
+                        </p>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="reveal reveal-d1">
+                        <span class="label" style="display:block;margin-bottom:var(--s6);">Message Us</span>
+
+                        <!-- Success state -->
+                        <div class="form-success" id="form-success" role="alert" aria-live="assertive">
+                            <h4>Message received.</h4>
+                            <p>Thank you — we'll respond within 1 business day.</p>
+                        </div>
+
+                        <form class="form" id="contact-form" novalidate aria-label="Contact form">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="field-name">Full Name *</label>
+                                    <input type="text" id="field-name" name="name" required placeholder="Your name"
+                                        autocomplete="name" aria-required="true">
+                                    <span class="field-error" id="name-error" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="field-company">Company / Studio</label>
+                                    <input type="text" id="field-company" name="company"
+                                        placeholder="Studio / Company name" autocomplete="organization">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="field-email">Email *</label>
+                                    <input type="email" id="field-email" name="email" required
+                                        placeholder="your@email.com" autocomplete="email" aria-required="true">
+                                    <span class="field-error" id="email-error" role="alert"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="field-phone">WhatsApp / Phone</label>
+                                    <input type="tel" id="field-phone" name="phone" placeholder="+62 8XX XXXX XXXX"
+                                        autocomplete="tel">
+                                    <span class="field-error" id="phone-error" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="field-subject">Topic</label>
+                                <select id="field-subject" name="subject">
+                                    <option value="">— Select a topic —</option>
+                                    <option value="sample">Sample Request</option>
+                                    <option value="product">Product Enquiry</option>
+                                    <option value="specification">Project Specification</option>
+                                    <option value="pricing">Pricing &amp; Availability</option>
+                                    <option value="custom">Custom Dimensions</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="field-message">Message *</label>
+                                <textarea id="field-message" name="message" required
+                                    placeholder="Describe your project, which tiles you're interested in, or anything you'd like to know…"
+                                    aria-required="true"></textarea>
+                                <span class="field-error" id="message-error" role="alert"></span>
+                            </div>
+
+                            <!-- Backend note -->
+                            <p
+                                style="font-size:var(--text-xs);color:var(--text-muted);line-height:1.6;padding:var(--s4);border:1px solid var(--border);">
+                                <strong>Note:</strong> This form currently uses client-side validation only. To activate
+                                email delivery, integrate with <a href="https://formspree.io" target="_blank"
+                                    rel="noopener" style="color:var(--accent);">Formspree</a> or <a
+                                    href="https://emailjs.com" target="_blank" rel="noopener"
+                                    style="color:var(--accent);">EmailJS</a>. WhatsApp and email links above always
+                                work.
+                            </p>
+
+                            <button type="submit" class="btn btn-dark" id="submit-btn" style="align-self:flex-start;">
+                                Send Message &rarr;
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/ASSET LOGO.png" alt="Reka Ruang" class="logo-img"
+                        style="filter:brightness(0) invert(1);opacity:0.85;">
+                    <p class="footer-tagline">Premium interior tiles made from upcycled industrial material.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener" class="social-link"
+                            aria-label="Instagram">&#9728;</a>
+                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener" class="social-link"
+                            aria-label="WhatsApp">&#9776;</a>
+                        <a href="mailto:hello@rekaruang.com" class="social-link" aria-label="Email">&#9993;</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="catalog.html">Products</a></li>
+                        <li><a href="gallery.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collection</h4>
+                    <ul>
+                        <li><a href="catalog.html">Classic Blend</a></li>
+                        <li><a href="catalog.html">Crimson Earth</a></li>
+                        <li><a href="catalog.html">Teal Mineral</a></li>
+                        <li><a href="catalog.html">Terrazzo Mix</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <address>
+                        Jakarta, Indonesia<br><br>
+                        <a href="mailto:hello@rekaruang.com">hello@rekaruang.com</a><br>
+                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener">WhatsApp: +62 XXX XXX
+                            XXXX</a><br>
+                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener">@rekaruang</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Reka Ruang. All rights reserved.</p>
+                <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

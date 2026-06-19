@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Reka Ruang project gallery — see upcycled tiles applied in residential, commercial, and hospitality interiors.">
+    <title>Projects — Reka Ruang</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav class="navbar solid" aria-label="Main navigation">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="Reka Ruang Home">
+                <img src="assets/images/ASSET LOGO.png" alt="Reka Ruang" class="logo-img">
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="catalog.html" class="nav-link">Products</a></li>
+                <li><a href="gallery.html" class="nav-link active">Projects</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="catalog.html" class="nav-link">Products</a>
+        <a href="gallery.html" class="nav-link active">Projects</a>
+        <a href="contact.html" class="nav-contact">Contact</a>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <header class="page-header" aria-label="Projects gallery header">
+        <div class="container">
+            <div class="page-header-inner">
+                <div>
+                    <span class="label">Applied Projects</span>
+                    <h1>Material in context.</h1>
+                    <p>Interior visualisations and completed applications featuring the Reka Tiles collection.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══ GALLERY ══ -->
+        <section class="section-md" aria-labelledby="gallery-heading" style="padding-top:var(--s9);">
+            <div class="container">
+                <div
+                    style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:var(--s5);flex-wrap:wrap;gap:var(--s4);">
+                    <h2 id="gallery-heading" class="reveal">Applications</h2>
+                    <!-- Filter buttons -->
+                    <div class="gallery-filters" id="gallery-filters" role="group" aria-label="Filter by project type"
+                        style="border:none;margin-bottom:0;">
+                        <button class="gallery-filter-btn active" data-cat="all" aria-pressed="true">All</button>
+                        <button class="gallery-filter-btn" data-cat="residential"
+                            aria-pressed="false">Residential</button>
+                        <button class="gallery-filter-btn" data-cat="commercial"
+                            aria-pressed="false">Commercial</button>
+                        <button class="gallery-filter-btn" data-cat="bathroom" aria-pressed="false">Bathroom</button>
+                    </div>
+                </div>
+                <span class="divider-full" style="margin-bottom:var(--s7);"></span>
+
+                <div class="gallery-grid-page" id="gallery-grid">
+
+                    <!-- Visualisasi grid — all 4 assets -->
+                    <article class="gallery-page-item wide reveal" data-cat="residential">
+                        <img src="assets/visual produk/ASSET VISUALISASI.png"
+                            alt="Four interior visualisation renders — Reka Tiles in residential, office, bathroom applications"
+                            loading="eager">
+                        <div class="gallery-caption-overlay">
+                            <div>
+                                <h4>Reka Tiles — Overview</h4>
+                                <p class="label-light">Four interior applications</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-page-item reveal reveal-d1" data-cat="residential">
+                        <img src="assets/visual produk/ASSET V1.png"
+                            alt="Residential bedroom with Reka Tiles crimson feature wall" loading="lazy">
+                        <div class="gallery-caption-overlay">
+                            <div>
+                                <!-- PLACEHOLDER — replace with real project details -->
+                                <h4>Private Residence</h4>
+                                <p class="label-light">Crimson Earth · Feature Wall</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-page-item reveal reveal-d2" data-cat="commercial">
+                        <img src="assets/visual produk/ASSET V2.png"
+                            alt="Executive office with Reka Tiles teal mineral accent wall" loading="lazy">
+                        <div class="gallery-caption-overlay">
+                            <div>
+                                <!-- PLACEHOLDER — replace with real project details -->
+                                <h4>Executive Office</h4>
+                                <p class="label-light">Teal Mineral · Accent Wall</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-page-item reveal" data-cat="bathroom">
+                        <img src="assets/visual produk/ASSET V3.png"
+                            alt="Luxury bathroom with Reka Tiles full wall cladding" loading="lazy">
+                        <div class="gallery-caption-overlay">
+                            <div>
+                                <!-- PLACEHOLDER — replace with real project details -->
+                                <h4>Luxury Bathroom</h4>
+                                <p class="label-light">Teal Mineral · Wall Cladding</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Placeholder note -->
+                <div style="margin-top:var(--s7);padding:var(--s5);border:1px solid var(--border);background:transparent;"
+                    class="reveal">
+                    <p style="font-size:var(--text-xs);color:var(--text-muted);line-height:1.6;">
+                        <!-- PLACEHOLDER NOTE — visible to editor only, remove before launch -->
+                        <strong style="color:var(--accent);">Placeholder:</strong> Images above are rendered
+                        visualisations. Replace with real project photography once available. Add additional project
+                        articles to this section as the portfolio grows.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ CTA ══ -->
+        <section style="padding:var(--s8) 0;border-top:1px solid var(--border);" aria-label="Project submission">
+            <div class="container">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s5);"
+                    class="reveal">
+                    <div>
+                        <span class="label" style="display:block;margin-bottom:var(--s3);">Specified Reka Tiles?</span>
+                        <h3>Share your project.</h3>
+                        <p style="color:var(--text-secondary);font-size:var(--text-sm);margin-top:var(--s2);">We'd love
+                            to feature projects where our tiles have been applied.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-dark">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/ASSET LOGO.png" alt="Reka Ruang" class="logo-img"
+                        style="filter:brightness(0) invert(1);opacity:0.85;">
+                    <p class="footer-tagline">Premium interior tiles made from upcycled industrial material.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener" class="social-link"
+                            aria-label="Instagram">&#9728;</a>
+                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener" class="social-link"
+                            aria-label="WhatsApp">&#9776;</a>
+                        <a href="mailto:hello@rekaruang.com" class="social-link" aria-label="Email">&#9993;</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="catalog.html">Products</a></li>
+                        <li><a href="gallery.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collection</h4>
+                    <ul>
+                        <li><a href="catalog.html">Classic Blend</a></li>
+                        <li><a href="catalog.html">Crimson Earth</a></li>
+                        <li><a href="catalog.html">Teal Mineral</a></li>
+                        <li><a href="catalog.html">Terrazzo Mix</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <address>
+                        Jakarta, Indonesia<br><br>
+                        <a href="mailto:hello@rekaruang.com">hello@rekaruang.com</a><br>
+                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener">WhatsApp: +62 XXX XXX
+                            XXXX</a><br>
+                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener">@rekaruang</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Reka Ruang. All rights reserved.</p>
+                <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        /* ── Gallery filter ── */
+        document.addEventListener("DOMContentLoaded", () => {
+            const btns = document.querySelectorAll("[data-cat]");
+            const items = document.querySelectorAll(".gallery-page-item");
+            btns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    btns.forEach(b => { b.classList.remove("active"); b.setAttribute("aria-pressed", "false"); });
+                    btn.classList.add("active"); btn.setAttribute("aria-pressed", "true");
+                    const cat = btn.dataset.cat;
+                    items.forEach(item => {
+                        const show = cat === "all" || item.dataset.cat === cat;
+                        item.style.display = show ? "" : "none";
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

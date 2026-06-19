@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Reka Tiles Product Catalog — browse the full collection of upcycled interior tiles. Filter by application, view specs, and request samples.">
+    <title>Products — Reka Ruang</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══ -->
+    <nav class="navbar solid" aria-label="Main navigation">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="Reka Ruang Home">
+                <img src="assets/images/ASSET LOGO.png" alt="Reka Ruang" class="logo-img">
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="catalog.html" class="nav-link active">Products</a></li>
+                <li><a href="gallery.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="catalog.html" class="nav-link active">Products</a>
+        <a href="gallery.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-contact">Contact</a>
+    </nav>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <header class="page-header" aria-label="Product catalog header">
+        <div class="container">
+            <div class="page-header-inner">
+                <div>
+                    <span class="label">Reka Tiles Collection</span>
+                    <h1>Product Catalog</h1>
+                    <p>Upcycled interior tiles for wall cladding, feature walls, and furniture surfaces. Click any tile
+                        to view full specifications.</p>
+                </div>
+                <a href="contact.html" class="btn btn-dark btn-sm">Request a Sample</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══ FILTER BAR ══ -->
+        <div class="catalog-controls" role="search" aria-label="Filter products">
+            <div class="container">
+                <div class="catalog-filter-row">
+                    <div style="display:flex;align-items:center;gap:var(--s5);flex-wrap:wrap;">
+                        <span class="label" style="white-space:nowrap;">Filter:</span>
+                        <div class="filter-btns" id="filter-btns" role="group" aria-label="Application filters">
+                            <!-- Built by products.js -->
+                        </div>
+                    </div>
+                    <span class="result-count" id="result-count" aria-live="polite">— products</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ PRODUCTS ══ -->
+        <section class="catalog-section" aria-label="Product grid">
+            <div class="container">
+                <div class="products-grid" id="products-grid" role="list">
+                    <div class="products-empty" aria-live="polite">Loading collection…</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ NOTE STRIP ══ -->
+        <section style="padding:var(--s7) 0;background:var(--bg-dark);" aria-label="Customisation note">
+            <div class="container">
+                <div
+                    style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s5);">
+                    <div>
+                        <span class="label-light" style="display:block;margin-bottom:var(--s3);">Custom
+                            Dimensions</span>
+                        <h3 style="color:var(--color-canvas);">Need a bespoke size?</h3>
+                        <p style="color:rgba(253,254,246,0.7);font-size:var(--text-sm);margin-top:var(--s2);">We can
+                            discuss custom formats for project-scale specifications.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline-light">Discuss with Us</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══ PRODUCT MODAL ══ -->
+    <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-label="Product detail">
+        <div class="modal">
+            <div class="modal-img">
+                <img src="" alt="" loading="lazy">
+                <button class="modal-close" id="modal-close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <span class="label-accent modal-collection"></span>
+                <h2 class="modal-product-name"></h2>
+                <span class="divider"></span>
+
+                <p class="modal-desc" style="font-size:var(--text-sm);color:var(--text-secondary);line-height:1.7;"></p>
+
+                <div>
+                    <span class="label" style="display:block;margin-bottom:var(--s3);">Specifications</span>
+                    <div class="modal-spec-grid">
+                        <div class="modal-spec">
+                            <span class="label">Material</span>
+                            <span class="modal-material"></span>
+                        </div>
+                        <div class="modal-spec">
+                            <span class="label">Finish</span>
+                            <span class="modal-finish"></span>
+                        </div>
+                        <div class="modal-spec">
+                            <span class="label">Thickness</span>
+                            <span class="modal-thickness"></span>
+                        </div>
+                        <div class="modal-spec">
+                            <span class="label">Weight</span>
+                            <span class="modal-weight"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="label" style="display:block;margin-bottom:var(--s3);">Dimensions</span>
+                    <ul class="modal-dimensions"></ul>
+                </div>
+
+                <div>
+                    <span class="label" style="display:block;margin-bottom:var(--s3);">Applications</span>
+                    <div class="modal-apps"></div>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="contact.html" class="btn btn-dark">Request Sample</a>
+                    <a href="contact.html" class="btn btn-outline">Ask a Question</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/ASSET LOGO.png" alt="Reka Ruang" class="logo-img"
+                        style="filter:brightness(0) invert(1);opacity:0.85;">
+                    <p class="footer-tagline">Premium interior tiles made from upcycled industrial material.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener" class="social-link"
+                            aria-label="Instagram">&#9728;</a>
+                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener" class="social-link"
+                            aria-label="WhatsApp">&#9776;</a>
+                        <a href="mailto:hello@rekaruang.com" class="social-link" aria-label="Email">&#9993;</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="catalog.html">Products</a></li>
+                        <li><a href="gallery.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Collection</h4>
+                    <ul>
+                        <li><a href="catalog.html">Classic Blend</a></li>
+                        <li><a href="catalog.html">Crimson Earth</a></li>
+                        <li><a href="catalog.html">Teal Mineral</a></li>
+                        <li><a href="catalog.html">Terrazzo Mix</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <address>
+                        Jakarta, Indonesia<br><br>
+                        <a href="mailto:hello@rekaruang.com">hello@rekaruang.com</a><br>
+                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener">WhatsApp: +62 XXX XXX
+                            XXXX</a><br>
+                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener">@rekaruang</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Reka Ruang. All rights reserved.</p>
+                <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

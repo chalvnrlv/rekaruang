@@ -114,7 +114,7 @@ function initScrollAnimations() {
         { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
 
-    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+    document.querySelectorAll(".fade-in, .reveal").forEach((el) => observer.observe(el));
 }
 
 /* Public re-trigger for dynamically rendered cards */

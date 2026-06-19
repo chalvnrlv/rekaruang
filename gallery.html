@@ -39,13 +39,14 @@
     </nav>
 
     <!-- ══ PAGE HEADER ══ -->
-    <header class="page-header" aria-label="Projects gallery header">
+    <header class="page-header" aria-label="Galeri proyek Reka Ruang">
         <div class="container">
             <div class="page-header-inner">
                 <div>
-                    <span class="label">Applied Projects</span>
-                    <h1>Material in context.</h1>
-                    <p>Interior visualisations and completed applications featuring the Reka Tiles collection.</p>
+                    <span class="label">Penerapan Proyek</span>
+                    <h1>Material dalam konteks.</h1>
+                    <p>Visualisasi interior dan contoh penerapan langsung koleksi Ubin Reka di berbagai ruang hunian,
+                        komersial, dan perhotelan (hospitality).</p>
                 </div>
             </div>
         </div>
@@ -54,105 +55,116 @@
     <main>
 
         <!-- ══ GALLERY ══ -->
-        <section class="section-md" aria-labelledby="gallery-heading" style="padding-top:var(--s9);">
+        <section class="section-md" aria-labelledby="gallery-heading"
+            style="padding-top: var(--s5); padding-bottom: var(--s5);">
             <div class="container">
                 <div
                     style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:var(--s5);flex-wrap:wrap;gap:var(--s4);">
-                    <h2 id="gallery-heading" class="reveal">Applications</h2>
+                    <h2 id="gallery-heading" class="reveal">Penerapan</h2>
                     <!-- Filter buttons -->
-                    <div class="gallery-filters" id="gallery-filters" role="group" aria-label="Filter by project type"
-                        style="border:none;margin-bottom:0;">
-                        <button class="gallery-filter-btn active" data-cat="all" aria-pressed="true">All</button>
+                    <div class="gallery-filters" id="gallery-filters" role="group"
+                        aria-label="Filter berdasarkan tipe proyek" style="border:none;margin-bottom:0;">
+                        <button class="gallery-filter-btn active" data-cat="all" aria-pressed="true">Semua</button>
                         <button class="gallery-filter-btn" data-cat="residential"
-                            aria-pressed="false">Residential</button>
-                        <button class="gallery-filter-btn" data-cat="commercial"
-                            aria-pressed="false">Commercial</button>
-                        <button class="gallery-filter-btn" data-cat="bathroom" aria-pressed="false">Bathroom</button>
+                            aria-pressed="false">Residensial</button>
+                        <button class="gallery-filter-btn" data-cat="commercial" aria-pressed="false">Komersial</button>
+                        <button class="gallery-filter-btn" data-cat="hospitality"
+                            aria-pressed="false">Perhotelan</button>
                     </div>
                 </div>
-                <span class="divider-full" style="margin-bottom:var(--s7);"></span>
+                <span class="divider-full" style="margin-bottom: var(--s4);"></span>
 
                 <div class="gallery-grid-page" id="gallery-grid">
 
-                    <!-- Visualisasi grid — all 4 assets -->
-                    <article class="gallery-page-item wide reveal" data-cat="residential">
-                        <img src="assets/visual produk/ASSET VISUALISASI.png"
-                            alt="Four interior visualisation renders — Reka Tiles in residential, office, bathroom applications"
-                            loading="eager">
+                    <article class="gallery-page-item reveal" data-cat="residential" style="position:relative;">
+                        <img src="assets/visual-produk/ASSET-V1.png"
+                            alt="Interior residensial dengan dinding aksen Ubin Reka" loading="eager"
+                            class="gallery-clickable" data-modal="modal-v1">
                         <div class="gallery-caption-overlay">
                             <div>
-                                <h4>Reka Tiles — Overview</h4>
-                                <p class="label-light">Four interior applications</p>
+                                <h4>Interior Residensial</h4>
+                                <p class="label-light">Penerapan dinding aksen · Crimson Earth</p>
                             </div>
                         </div>
                     </article>
 
-                    <article class="gallery-page-item reveal reveal-d1" data-cat="residential">
-                        <img src="assets/visual produk/ASSET V1.png"
-                            alt="Residential bedroom with Reka Tiles crimson feature wall" loading="lazy">
+                    <article class="gallery-page-item reveal reveal-d1" data-cat="commercial"
+                        style="position:relative;">
+                        <img src="assets/visual-produk/ASSET-V2.png"
+                            alt="Ruang komersial kantor dengan dinding aksen Ubin Reka" loading="lazy"
+                            class="gallery-clickable" data-modal="modal-v2">
                         <div class="gallery-caption-overlay">
                             <div>
-                                <!-- PLACEHOLDER — replace with real project details -->
-                                <h4>Private Residence</h4>
-                                <p class="label-light">Crimson Earth · Feature Wall</p>
+                                <h4>Ruang Komersial</h4>
+                                <p class="label-light">Interior ritel & kantor · Teal Mineral</p>
                             </div>
                         </div>
                     </article>
 
-                    <article class="gallery-page-item reveal reveal-d2" data-cat="commercial">
-                        <img src="assets/visual produk/ASSET V2.png"
-                            alt="Executive office with Reka Tiles teal mineral accent wall" loading="lazy">
+                    <article class="gallery-page-item reveal reveal-d2" data-cat="hospitality"
+                        style="position:relative;">
+                        <img src="assets/visual-produk/ASSET-V3.png" alt="Interior perhotelan dan kafe dengan Ubin Reka"
+                            loading="lazy" class="gallery-clickable" data-modal="modal-v3">
                         <div class="gallery-caption-overlay">
                             <div>
-                                <!-- PLACEHOLDER — replace with real project details -->
-                                <h4>Executive Office</h4>
-                                <p class="label-light">Teal Mineral · Accent Wall</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="gallery-page-item reveal" data-cat="bathroom">
-                        <img src="assets/visual produk/ASSET V3.png"
-                            alt="Luxury bathroom with Reka Tiles full wall cladding" loading="lazy">
-                        <div class="gallery-caption-overlay">
-                            <div>
-                                <!-- PLACEHOLDER — replace with real project details -->
-                                <h4>Luxury Bathroom</h4>
-                                <p class="label-light">Teal Mineral · Wall Cladding</p>
+                                <h4>Perhotelan & Kafe</h4>
+                                <p class="label-light">Permukaan aksen · Pelapis dinding</p>
                             </div>
                         </div>
                     </article>
 
                 </div>
 
-                <!-- Placeholder note -->
-                <div style="margin-top:var(--s7);padding:var(--s5);border:1px solid var(--border);background:transparent;"
+                <!-- Project philosophy -->
+                <div style="margin-top: var(--s5); padding: var(--s7) var(--s6); background: var(--color-teal); border-left: 4px solid var(--color-mint);"
                     class="reveal">
-                    <p style="font-size:var(--text-xs);color:var(--text-muted);line-height:1.6;">
-                        <!-- PLACEHOLDER NOTE — visible to editor only, remove before launch -->
-                        <strong style="color:var(--accent);">Placeholder:</strong> Images above are rendered
-                        visualisations. Replace with real project photography once available. Add additional project
-                        articles to this section as the portfolio grows.
+                    <span style="display:block; font-size:var(--text-xs); font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--color-mint); margin-bottom:var(--s4);">Filosofi Proyek</span>
+                    <p style="font-size:var(--text-base); color:rgba(253,254,246,0.85); line-height:1.85; max-width:680px;">
+                        Setiap proyek bersama Reka Ruang bukan hanya tentang penggunaan material, tetapi tentang
+                        bagaimana ruang dapat bercerita melalui desain yang bertanggung jawab dan berdampak. Material
+                        aksen yang menciptakan identitas visual ruang sekaligus menunjukkan komitmen keberlanjutan.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- ══ CTA ══ -->
-        <section style="padding:var(--s8) 0;border-top:1px solid var(--border);" aria-label="Project submission">
+        <section style="padding: var(--s5) 0; border-top: 1px solid var(--border);" aria-label="Pengiriman proyek">
             <div class="container">
                 <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s5);"
                     class="reveal">
                     <div>
-                        <span class="label" style="display:block;margin-bottom:var(--s3);">Specified Reka Tiles?</span>
-                        <h3>Share your project.</h3>
-                        <p style="color:var(--text-secondary);font-size:var(--text-sm);margin-top:var(--s2);">We'd love
-                            to feature projects where our tiles have been applied.</p>
+                        <span class="label" style="display:block;margin-bottom:var(--s3);">Menggunakan Ubin Reka?</span>
+                        <h3>Bagikan proyek Anda.</h3>
+                        <p style="color:var(--text-secondary);font-size:var(--text-sm);margin-top:var(--s2);">Kami
+                            sangat senang menampilkan proyek-proyek menarik yang menggunakan ubin kami.</p>
                     </div>
-                    <a href="contact.html" class="btn btn-dark">Get in Touch</a>
+                    <a href="contact.html" class="btn btn-dark">Hubungi Kami</a>
                 </div>
             </div>
         </section>
+
+        <!-- ══ IMAGE MODALS ══ -->
+        <div class="gallery-modal-overlay" id="modal-v1">
+            <div class="gallery-modal-container">
+                <button class="gallery-modal-close" aria-label="Tutup modal">&times;</button>
+                <img src="assets/visual-produk/ASSET-V1.png" alt="Tampilan penuh interior residensial">
+            </div>
+        </div>
+
+        <div class="gallery-modal-overlay" id="modal-v2">
+            <div class="gallery-modal-container">
+                <button class="gallery-modal-close" aria-label="Tutup modal">&times;</button>
+                <img src="assets/visual-produk/ASSET-V2.png" alt="Tampilan penuh ruang komersial">
+            </div>
+        </div>
+
+        <div class="gallery-modal-overlay" id="modal-v3">
+            <div class="gallery-modal-container">
+                <button class="gallery-modal-close" aria-label="Tutup modal">&times;</button>
+                <img src="assets/visual-produk/ASSET-V3.png" alt="Tampilan penuh ruang perhotelan">
+            </div>
+        </div>
 
     </main>
 
@@ -211,21 +223,134 @@
 
     <script src="js/main.js"></script>
     <script>
-        /* ── Gallery filter ── */
+        /* ── Gallery Modal & Filter ── */
         document.addEventListener("DOMContentLoaded", () => {
-            const btns = document.querySelectorAll("[data-cat]");
-            const items = document.querySelectorAll(".gallery-page-item");
-            btns.forEach(btn => {
+            console.log("Gallery script loaded");
+
+            // Force gallery items to be visible
+            document.querySelectorAll(".gallery-page-item").forEach(item => {
+                item.classList.add("visible");
+            });
+
+            // ── Gallery Filter (hanya untuk tombol filter) ──
+            const filterBtns = document.querySelectorAll(".gallery-filter-btn");
+            const galleryItems = document.querySelectorAll(".gallery-page-item");
+
+            filterBtns.forEach(btn => {
                 btn.addEventListener("click", () => {
-                    btns.forEach(b => { b.classList.remove("active"); b.setAttribute("aria-pressed", "false"); });
+                    filterBtns.forEach(b => { b.classList.remove("active"); b.setAttribute("aria-pressed", "false"); });
                     btn.classList.add("active"); btn.setAttribute("aria-pressed", "true");
                     const cat = btn.dataset.cat;
-                    items.forEach(item => {
+                    galleryItems.forEach(item => {
                         const show = cat === "all" || item.dataset.cat === cat;
                         item.style.display = show ? "" : "none";
                     });
                 });
             });
+
+            // ── Gallery Modal ──
+            const modals = document.querySelectorAll(".gallery-modal-overlay");
+            const closeButtons = document.querySelectorAll(".gallery-modal-close");
+
+            console.log("[Gallery Debug] Found", galleryItems.length, "gallery items in DOM");
+            console.log("[Gallery Debug] Found", modals.length, "modal overlays in DOM");
+            console.log("[Gallery Debug] Found", closeButtons.length, "close buttons in DOM");
+
+            // Add click event to gallery items (entire card)
+            galleryItems.forEach((item, index) => {
+                item.style.cursor = "pointer";
+                item.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    console.log(`[Gallery Debug] Card #${index + 1} clicked!`, {
+                        element: item,
+                        clickTarget: e.target,
+                        currentTarget: e.currentTarget
+                    });
+
+                    const img = item.querySelector(".gallery-clickable");
+                    if (!img) {
+                        console.error("[Gallery Debug] ERROR: No image with class '.gallery-clickable' found inside this card.");
+                        return;
+                    }
+                    console.log("[Gallery Debug] Found clickable image inside card:", img);
+
+                    const modalId = img.getAttribute("data-modal");
+                    if (!modalId) {
+                        console.error("[Gallery Debug] ERROR: Image does not have 'data-modal' attribute.");
+                        return;
+                    }
+                    console.log("[Gallery Debug] Retrieved modalId:", modalId);
+
+                    const modal = document.getElementById(modalId);
+                    if (!modal) {
+                        console.error(`[Gallery Debug] ERROR: No modal element found in DOM with id='${modalId}'`);
+                        return;
+                    }
+                    console.log("[Gallery Debug] Found modal element:", modal);
+
+                    // Add active class
+                    console.log("[Gallery Debug] Adding 'active' class to modal...");
+                    modal.classList.add("active");
+                    document.body.style.overflow = "hidden";
+
+                    // Check computed styles to see if CSS is actually displaying it
+                    const computedStyle = window.getComputedStyle(modal);
+                    console.log("[Gallery Debug] Modal overlay computed styles post-click:", {
+                        opacity: computedStyle.opacity,
+                        visibility: computedStyle.visibility,
+                        display: computedStyle.display,
+                        zIndex: computedStyle.zIndex,
+                        pointerEvents: computedStyle.pointerEvents
+                    });
+
+                    if (computedStyle.opacity !== "1" || computedStyle.visibility !== "visible") {
+                        console.warn("[Gallery Debug] WARNING: Modal active class was added, but the computed style opacity is not 1 or visibility is not visible. Please verify if CSS rule for '.gallery-modal-overlay.active' is defined in style.css and matches exactly.");
+                    } else {
+                        console.log("[Gallery Debug] SUCCESS: Modal overlay is active and should be visible.");
+                    }
+                });
+            });
+
+            // Close button handler
+            closeButtons.forEach((btn, index) => {
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    console.log(`[Gallery Debug] Close button #${index + 1} clicked!`);
+                    const modal = e.target.closest(".gallery-modal-overlay");
+                    if (modal) {
+                        modal.classList.remove("active");
+                        document.body.style.overflow = "auto";
+                        console.log("[Gallery Debug] Modal active class removed successfully.");
+                    } else {
+                        console.error("[Gallery Debug] ERROR: Could not find parent '.gallery-modal-overlay' for this close button.");
+                    }
+                });
+            });
+
+            // Click outside to close
+            modals.forEach((modal, index) => {
+                modal.addEventListener("click", (e) => {
+                    console.log(`[Gallery Debug] Click inside modal overlay #${index + 1}. Target:`, e.target);
+                    if (e.target === modal) {
+                        modal.classList.remove("active");
+                        document.body.style.overflow = "auto";
+                        console.log("[Gallery Debug] Clicked outside modal image. Modal closed.");
+                    }
+                });
+            });
+
+            // ESC key to close
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    modals.forEach(modal => {
+                        modal.classList.remove("active");
+                        document.body.style.overflow = "auto";
+                    });
+                }
+            });
+
+            // Trigger scroll animations on page load
+            window.triggerFadeIns?.();
         });
     </script>
 </body>

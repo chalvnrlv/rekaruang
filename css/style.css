@@ -1343,7 +1343,7 @@ a:focus-visible {
 
 .gallery-grid-page {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2px;
 }
 
@@ -1353,6 +1353,7 @@ a:focus-visible {
   aspect-ratio: 4/3;
   cursor: pointer;
   background: #f0f0e8;
+  border: 1px solid var(--border);
 }
 
 .gallery-page-item img {
@@ -1360,6 +1361,10 @@ a:focus-visible {
   height: 100%;
   object-fit: cover;
   transition: transform var(--dur-slow) var(--ease);
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  background: #f0f0e8;
 }
 
 .gallery-page-item:hover img {
@@ -1369,6 +1374,7 @@ a:focus-visible {
 .gallery-page-item.wide {
   grid-column: span 2;
   aspect-ratio: 16/6;
+  margin-bottom: var(--s5);
 }
 
 .gallery-caption-overlay {
@@ -1395,6 +1401,94 @@ a:focus-visible {
 .gallery-caption-overlay p {
   color: var(--muted);
   font-size: var(--text-xs);
+}
+
+/* ── Gallery Modal ── */
+.gallery-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 8, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s var(--ease), visibility 0.3s var(--ease);
+  padding: var(--s5);
+  pointer-events: none;
+}
+
+.gallery-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gallery-modal-container {
+  position: relative;
+  max-width: 47.5vw;
+  max-height: 47.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.gallery-modal-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  animation: modalZoomIn 0.3s var(--ease);
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #ffffff;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s var(--ease);
+  z-index: 3001;
+  padding: 0;
+  line-height: 1;
+}
+
+.gallery-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-modal-container {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
 }
 
 /* ── ABOUT PAGE ── */
@@ -1602,6 +1696,12 @@ a:focus-visible {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Gallery items should show immediately */
+.gallery-page-item.reveal {
+  opacity: 1;
+  transform: none;
 }
 
 .reveal-d1 {

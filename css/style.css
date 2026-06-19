@@ -629,9 +629,34 @@ a:focus-visible {
   padding-bottom: var(--s8);
   background: var(--bg);
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header.has-bg {
+  padding-top: calc(var(--nav-h) + var(--s10));
+  padding-bottom: var(--s9);
+  color: var(--color-canvas);
+  border-bottom: none;
+}
+
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.page-header-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  /* Darkened from 0.65 for better text contrast */
 }
 
 .page-header-inner {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -1780,9 +1805,75 @@ a:focus-visible {
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  gap: var(--s6);
+  /* Changed from 1px to gap for individual cards */
+}
+
+.product-card {
+  background: var(--color-canvas);
+  border: 1px solid var(--accent);
+  /* Sharp border — #6d1f21 */
+  display: flex;
+  flex-direction: column;
+  transition: all var(--dur) var(--ease);
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(109, 31, 33, 0.1);
+}
+
+.product-img-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f0f0e8;
+  border-bottom: 1px solid var(--accent);
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease);
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: var(--s5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: var(--text-lg);
+  margin-top: var(--s2);
+  margin-bottom: var(--s2);
+}
+
+.product-info .desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--s5);
+}
+
+.product-info-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-meta-chips {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
 }
 
 .products-empty {

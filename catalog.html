@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Reka Tiles Product Catalog — browse the full collection of upcycled interior tiles. Filter by application, view specs, and request samples.">
-    <title>Products — Reka Ruang</title>
+        content="Jelajahi koleksi Reka Tiles, material interior dekoratif premium berbasis upcycling dari limbah kain dan kayu. Temukan spesifikasi teknis dan request sampel sekarang.">
+    <title>Katalog Produk — Reka Ruang</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,16 +16,20 @@
     <div id="navbar-placeholder" data-nav-class="solid"></div>
 
     <!-- ══ PAGE HEADER ══ -->
-    <header class="page-header" aria-label="Product catalog header">
+    <header class="page-header has-bg" aria-label="Product catalog header">
+        <div class="page-header-bg">
+            <img src="assets/images/ASSET V4.png" alt="Reka Tiles Collection Visual">
+        </div>
         <div class="container">
             <div class="page-header-inner">
                 <div>
-                    <span class="label">Reka Tiles Collection</span>
-                    <h1>Product Catalog</h1>
-                    <p>Upcycled interior tiles for wall cladding, feature walls, and furniture surfaces. Click any tile
-                        to view full specifications.</p>
+                    <span class="label-light">Koleksi Reka Tiles</span>
+                    <h1 style="color:var(--color-canvas);">Katalog Produk</h1>
+                    <p style="color:var(--color-canvas); text-shadow: 0 1px 12px rgb(0, 0, 0);">Material dekoratif
+                        premium berbasis upcycling yang menggabungkan inovasi material dengan ekspresi visual unik. Klik
+                        pada produk untuk spesifikasi teknis lengkap.</p>
                 </div>
-                <a href="contact.html" class="btn btn-dark btn-sm">Request a Sample</a>
+                <a href="contact.html" class="btn btn-teal">Request Sampel</a>
             </div>
         </div>
     </header>
@@ -42,7 +46,7 @@
                             <!-- Built by products.js -->
                         </div>
                     </div>
-                    <span class="result-count" id="result-count" aria-live="polite">— products</span>
+                    <span class="result-count" id="result-count" aria-live="polite">— produk</span>
                 </div>
             </div>
         </div>
@@ -62,13 +66,12 @@
                 <div
                     style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--s5);">
                     <div>
-                        <span class="label-light" style="display:block;margin-bottom:var(--s3);">Custom
-                            Dimensions</span>
-                        <h3 style="color:var(--color-canvas);">Need a bespoke size?</h3>
-                        <p style="color:rgba(253,254,246,0.7);font-size:var(--text-sm);margin-top:var(--s2);">We can
-                            discuss custom formats for project-scale specifications.</p>
+                        <span class="label-light" style="display:block;margin-bottom:var(--s3);">Dimensi Kustom</span>
+                        <h3 style="color:var(--color-canvas);">Butuh ukuran khusus?</h3>
+                        <p style="color:rgba(253,254,246,0.7);font-size:var(--text-sm);margin-top:var(--s2);">Kami
+                            melayani pembuatan format khusus untuk spesifikasi proyek skala besar.</p>
                     </div>
-                    <a href="contact.html" class="btn btn-outline-light">Discuss with Us</a>
+                    <a href="contact.html" class="btn btn-outline-light">Konsultasi Sekarang</a>
                 </div>
             </div>
         </section>
@@ -90,97 +93,47 @@
                 <p class="modal-desc" style="font-size:var(--text-sm);color:var(--text-secondary);line-height:1.7;"></p>
 
                 <div>
-                    <span class="label" style="display:block;margin-bottom:var(--s3);">Specifications</span>
+                    <span class="label" style="display:block;margin-bottom:var(--s3);">Spesifikasi</span>
                     <div class="modal-spec-grid">
                         <div class="modal-spec">
                             <span class="label">Material</span>
                             <span class="modal-material"></span>
                         </div>
                         <div class="modal-spec">
-                            <span class="label">Finish</span>
+                            <span class="label">Hasil Akhir</span>
                             <span class="modal-finish"></span>
                         </div>
                         <div class="modal-spec">
-                            <span class="label">Thickness</span>
+                            <span class="label">Ketebalan</span>
                             <span class="modal-thickness"></span>
                         </div>
                         <div class="modal-spec">
-                            <span class="label">Weight</span>
+                            <span class="label">Berat</span>
                             <span class="modal-weight"></span>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <span class="label" style="display:block;margin-bottom:var(--s3);">Dimensions</span>
+                    <span class="label" style="display:block;margin-bottom:var(--s3);">Dimensi</span>
                     <ul class="modal-dimensions"></ul>
                 </div>
 
                 <div>
-                    <span class="label" style="display:block;margin-bottom:var(--s3);">Applications</span>
+                    <span class="label" style="display:block;margin-bottom:var(--s3);">Aplikasi</span>
                     <div class="modal-apps"></div>
                 </div>
 
                 <div class="modal-actions">
-                    <a href="contact.html" class="btn btn-dark">Request Sample</a>
-                    <a href="contact.html" class="btn btn-outline">Ask a Question</a>
+                    <a href="contact.html" class="btn btn-dark">Request Sampel</a>
+                    <a href="contact.html" class="btn btn-outline">Tanya Produk</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ══ FOOTER ══ -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="assets/images/ASSET LOGO.png" alt="Reka Ruang" class="logo-img"
-                        style="filter:brightness(0) invert(1);opacity:0.85;">
-                    <p class="footer-tagline">Premium interior tiles made from upcycled industrial material.</p>
-                    <div class="footer-social">
-                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener" class="social-link"
-                            aria-label="Instagram">&#9728;</a>
-                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener" class="social-link"
-                            aria-label="WhatsApp">&#9776;</a>
-                        <a href="mailto:hello@rekaruang.com" class="social-link" aria-label="Email">&#9993;</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="catalog.html">Products</a></li>
-                        <li><a href="gallery.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Collection</h4>
-                    <ul>
-                        <li><a href="catalog.html">Classic Blend</a></li>
-                        <li><a href="catalog.html">Crimson Earth</a></li>
-                        <li><a href="catalog.html">Teal Mineral</a></li>
-                        <li><a href="catalog.html">Terrazzo Mix</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <address>
-                        Jakarta, Indonesia<br><br>
-                        <a href="mailto:hello@rekaruang.com">hello@rekaruang.com</a><br>
-                        <a href="https://wa.me/62xxxxxxxxx" target="_blank" rel="noopener">WhatsApp: +62 XXX XXX
-                            XXXX</a><br>
-                        <a href="https://instagram.com/rekaruang" target="_blank" rel="noopener">@rekaruang</a>
-                    </address>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Reka Ruang. All rights reserved.</p>
-                <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
-            </div>
-        </div>
-    </footer>
+    <!-- ══ FOOTER (Dynamic) ══ -->
+    <div id="footer-placeholder"></div>
 
     <script src="js/products.js"></script>
     <script src="js/main.js"></script>

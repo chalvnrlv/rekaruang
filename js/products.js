@@ -5,68 +5,52 @@
 
 const PRODUCTS = [
     {
-        id: "rt-001",
-        collection: "Reka Tiles",
-        name: "Classic Blend",
-        tagline: "Terrazzo from reclaimed material",
+        id: "rt-01",
+        collection: "Reka Tiles 01",
+        name: "Material Limbah Kain",
+        tagline: "Eksklusivitas dari sisa tekstil",
         description:
-            "A signature terrazzo tile composed of upcycled ceramic and stone fragments set in a cement matrix. Each tile carries natural colour variation from its source materials — warm burgundy and cream tones with a matte surface that softens with light.",
-        material: "Upcycled ceramic · Reclaimed stone fragments · Cement binder",
-        finish: "Matte",
-        dimensions: ["30 × 30 cm", "20 × 20 cm", "Custom"],
-        thickness: "12 mm",
-        weight: "4.5 kg/tile (30×30)",
-        applications: ["Wall Cladding", "Feature Wall", "Flooring", "Commercial"],
+            "Material dekoratif inovatif berbasis limbah tekstil yang diolah melalui proses pewarnaan dan pencetakan khusus. Menghasilkan tekstur visual yang unik dengan nilai eksklusivitas tinggi pada setiap kepingnya.",
+        material: "Limbah tekstil (upcycled) · Pewarna khusus · Resin binder",
+        finish: "Tekstur Halus / Custom",
+        dimensions: ["20 × 20 cm", "Custom"],
+        thickness: "10–12 mm",
+        weight: "Proporsional",
+        applications: ["Wall Cladding", "Feature Wall", "Elemen Dekoratif", "Interior Retail"],
         image: "assets/images/produk per tiles.png",
-        badge: null,
+        badge: "Kain",
     },
     {
-        id: "rt-002",
-        collection: "Reka Tiles",
-        name: "Terrazzo Mix",
-        tagline: "Three variants, one collection",
+        id: "rt-02",
+        collection: "Reka Tiles 02",
+        name: "Material Limbah Kain",
+        tagline: "Eksklusivitas dari sisa tekstil",
         description:
-            "The full Reka Tiles collection in a single view — earthy crimson, teal mineral, and layered mixed aggregate. Each pair of tiles tells a different material story depending on installation pattern and light.",
-        material: "Mixed reclaimed aggregate · Mineral pigment · Portland cement",
-        finish: "Matte / Mineral",
-        dimensions: ["30 × 30 cm", "20 × 20 cm", "15 × 15 cm"],
-        thickness: "12–14 mm",
-        weight: "4.0–5.0 kg/tile",
-        applications: ["Wall Cladding", "Feature Wall", "Furniture Surface", "Commercial"],
-        image: "assets/images/ASSET V4.png",
-        badge: "Collection",
-    },
-    {
-        id: "rt-003",
-        collection: "Reka Tiles",
-        name: "Crimson Earth",
-        tagline: "Deep red from reclaimed clay",
-        description:
-            "A bold deep-crimson tile made from upcycled fired ceramic waste with a rich, dense texture. The colour draws from the natural iron oxide present in Indonesian clay — intense but warm, designed for statement surfaces.",
-        material: "Upcycled fired ceramics · Iron oxide pigment · Cement matrix",
-        finish: "Matte",
-        dimensions: ["30 × 30 cm", "20 × 20 cm"],
-        thickness: "13 mm",
-        weight: "4.8 kg/tile (30×30)",
-        applications: ["Feature Wall", "Wall Cladding", "Flooring"],
+            "Varian kedua dari koleksi material berbasis tekstil upcycling. Memiliki karakteristik warna yang lebih berani namun tetap mempertahankan tekstur serat yang organik dan elegan untuk aplikasi interior premium.",
+        material: "Limbah tekstil (upcycled) · Pewarna khusus · Resin binder",
+        finish: "Tekstur Halus / Custom",
+        dimensions: ["20 × 20 cm", "Custom"],
+        thickness: "10–12 mm",
+        weight: "Proporsional",
+        applications: ["Wall Cladding", "Feature Wall", "Elemen Dekoratif", "Interior Retail"],
         image: "assets/images/produk per tiles (1).png",
-        badge: null,
+        badge: "Kain",
     },
     {
-        id: "rt-004",
-        collection: "Reka Tiles",
-        name: "Teal Mineral",
-        tagline: "Cyan from glass and mineral aggregate",
+        id: "rt-03",
+        collection: "Reka Tiles 03",
+        name: "Material Limbah Kayu",
+        tagline: "Estetika serbuk kayu daur ulang",
         description:
-            "A cool, mineral tile made with upcycled coloured glass aggregate in shades of teal and cyan. The glass fragments catch directional light differently throughout the day — a material that changes with the space.",
-        material: "Upcycled coloured glass · Mineral aggregate · Eco-resin binder",
-        finish: "Matte / Mineral glint",
-        dimensions: ["30 × 30 cm", "20 × 20 cm", "Mosaic sheet 30×30"],
-        thickness: "11 mm",
-        weight: "3.8 kg/tile (30×30)",
-        applications: ["Wall Cladding", "Feature Wall", "Furniture Surface", "Commercial"],
+            "Material dekoratif berbasis limbah serbuk kayu yang dipadukan dengan resin dan pigmen warna. Menampilkan karakter material yang hangat namun kontemporer, ideal untuk aksen ruang interior modern.",
+        material: "Limbah serbuk kayu · Pigmen warna · Resin premium",
+        finish: "Matte / Custom Texture",
+        dimensions: ["20 × 20 cm", "Custom"],
+        thickness: "12 mm",
+        weight: "Proporsional",
+        applications: ["Wall Cladding", "Feature Wall", "Panel Dinding", "Interior Kafe"],
         image: "assets/images/produk per tiles (2).png",
-        badge: "Eco Pick",
+        badge: "Kayu",
     },
 ];
 
@@ -110,7 +94,7 @@ function productCardHTML(p) {
         <div class="product-meta-chips">
           ${p.applications.slice(0, 3).map(a => `<span class="tag tag-muted" style="font-size:0.62rem;padding:3px 8px;">${a}</span>`).join("")}
         </div>
-        <span class="link-arrow" style="font-size:0.7rem;">Details</span>
+        <span class="link-arrow" style="font-size:0.7rem;">Detail</span>
       </div>
     </div>
   </article>`;
@@ -118,7 +102,7 @@ function productCardHTML(p) {
 
 function updateCount(n) {
     const el = document.getElementById("result-count");
-    if (el) el.textContent = `${n} product${n !== 1 ? "s" : ""}`;
+    if (el) el.textContent = `${n} produk`;
 }
 
 /* ── Filters ── */
@@ -130,7 +114,7 @@ function buildFilters() {
 
     const apps = ["all", ...ALL_APPLICATIONS];
     container.innerHTML = apps.map(app =>
-        `<button class="filter-btn${app === "all" ? " active" : ""}" data-filter="${app}" aria-pressed="${app === "all"}">${app === "all" ? "All" : app}</button>`
+        `<button class="filter-btn${app === "all" ? " active" : ""}" data-filter="${app}" aria-pressed="${app === "all"}">${app === "all" ? "Semua" : app}</button>`
     ).join("");
 
     container.querySelectorAll(".filter-btn").forEach(btn => {

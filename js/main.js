@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    loadNavbar().then(() => {
+    Promise.all([loadNavbar(), loadFooter()]).then(() => {
         initScrollAnimations();
         initHero();
         initContactForm();
@@ -24,6 +24,20 @@ async function loadNavbar() {
         initNav(); // Initialize listeners once DOM is ready
     } catch (err) {
         console.error("Failed to load navbar:", err);
+    }
+}
+
+/* ── Load Common Footer ── */
+async function loadFooter() {
+    const placeholder = document.getElementById("footer-placeholder");
+    if (!placeholder) return;
+
+    try {
+        const response = await fetch("components/footer.html");
+        const html = await response.text();
+        placeholder.innerHTML = html;
+    } catch (err) {
+        console.error("Failed to load footer:", err);
     }
 }
 

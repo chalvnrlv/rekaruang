@@ -1,14 +1,45 @@
-/* ============================================================
-   REKA RUANG — Main JavaScript
-   Navigation, scroll effects, animations, contact form
-   ============================================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
-    initNav();
-    initScrollAnimations();
-    initHero();
-    initContactForm();
+    Promise.all([loadNavbar(), loadFooter()]).then(() => {
+        initScrollAnimations();
+        initHero();
+        initContactForm();
+    });
 });
+
+/* ── Load Common Navbar ── */
+async function loadNavbar() {
+    const placeholder = document.getElementById("navbar-placeholder");
+    if (!placeholder) return;
+
+    try {
+        const response = await fetch("components/navbar.html");
+        const html = await response.text();
+        placeholder.innerHTML = html;
+
+        // Apply page-specific navbar class (transparent vs solid)
+        const nav = placeholder.querySelector(".navbar");
+        const navClass = placeholder.dataset.navClass || "solid";
+        if (nav) nav.classList.add(navClass);
+
+        initNav(); // Initialize listeners once DOM is ready
+    } catch (err) {
+        console.error("Failed to load navbar:", err);
+    }
+}
+
+/* ── Load Common Footer ── */
+async function loadFooter() {
+    const placeholder = document.getElementById("footer-placeholder");
+    if (!placeholder) return;
+
+    try {
+        const response = await fetch("components/footer.html");
+        const html = await response.text();
+        placeholder.innerHTML = html;
+    } catch (err) {
+        console.error("Failed to load footer:", err);
+    }
+}
 
 /* ── Navbar ── */
 function initNav() {
@@ -111,9 +142,10 @@ function initScrollAnimations() {
                 }
             });
         },
-        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
 
+    // Observe both .fade-in and .reveal
     document.querySelectorAll(".fade-in, .reveal").forEach((el) => observer.observe(el));
 }
 
